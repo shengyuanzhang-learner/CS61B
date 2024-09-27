@@ -108,4 +108,18 @@ public class LinkedListDeque61BTest {
         assertThat(lld1.removeLast()).isEqualTo(-1);
         assertThat(lld1.removeLast()).isEqualTo(null);
     }
+    @Test
+    public void gettext(){
+         Deque61B<String> lld1 = new LinkedListDeque61B<>();
+         lld1.addLast("front");
+         lld1.addLast("middle");
+         lld1.addLast("back");
+         lld1.addFirst("front");
+         assertThat(lld1.get(1)).isEqualTo("front");
+         assertThat(lld1.get(2)).isEqualTo("middle");
+         assertThat(lld1.getRecursive(1)).isEqualTo("front");
+         assertThat(lld1.getRecursive(2)).isEqualTo("middle");
+
+
+    }
 }
